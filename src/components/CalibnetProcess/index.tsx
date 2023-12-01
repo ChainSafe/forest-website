@@ -1,7 +1,6 @@
 "use client" 
 
 import Sketch from "react-p5"
-import p5 from "p5";
 import terminalText from "./logs";
 
 export default function CalibnetProcess() {
