@@ -1,24 +1,25 @@
-"use client" 
+"use client"
 
 import Sketch from "react-p5"
 import terminalText from "./logs";
 
 export default function CalibnetProcess() {
 
-  let canvas: HTMLCanvasElement = document.createElement('canvas');
   let displayLines: string[] = [];
   let currentLine = 0;
   let frameCounter = 0;
   let maxDisplayLines:number;
 
-  let command = "forest --chain calibnet"; 
+  let command = "forest --chain calibnet";
   let typedText = "";
   let cursorBlink = true;
   let cursorPosition = 0;
   let typingSpeed = 80; // Milliseconds between each character
   let lastTypedTime = 0;
-  let duration = 30000;
+  let duration = 148116;
   let resetTime = 0;
+  let nextTime = 30;
+  let currentTime = new Date("1970-01-01 " + terminalText[0].split(" ", 1)[0]).getTime();
 
 function setup(p5: any, parent: Element) {
   p5.createCanvas(800, 300).parent(parent);
@@ -30,15 +31,14 @@ function setup(p5: any, parent: Element) {
   maxDisplayLines = 10;
 }
 
-
 function draw(p5:any) {
   p5.background(0);
   drawTypingText(p5);
-  drawCursor(p5); 
+  drawCursor(p5);
   if (p5.millis() > 2000) {
-    printLogs(p5); 
+    printLogs(p5);
   }
-  
+
   if (p5.millis() > resetTime + duration) {
     restartAnimation(p5);
   }
@@ -74,21 +74,29 @@ function printLogs(p5:any) {
   // Increment frameCounter and check if it's time to move to the next line
   frameCounter++;
   // print a new line every 30 frames
-  if (frameCounter > 30) {
-    frameCounter = 0;
-    currentLine++;
+  if (frameCounter > nextTime) {
 
     // If there's a new line in terminalText, push it to displayLines
     if (currentLine < terminalText.length) {
-      displayLines.push(terminalText[currentLine - 1]);
+      displayLines.push(terminalText[currentLine]);
     }
-    
+
+    // If there is a next linen after this, parse time diff from the logs
+    if (currentLine < terminalText.length - 1) {
+      let logTime = new Date("1970-01-01 " + terminalText[currentLine + 1].split(" ", 1)[0]).getTime();
+      nextTime = (logTime - currentTime) / 30;
+      currentTime = logTime;
+    }
+
     // If displayLines exceed maxDisplayLines, remove the first line
     if (displayLines.length > maxDisplayLines) {
       displayLines.shift();
     }
+
+    frameCounter = 0;
+    currentLine++;
   }
-  
+
   // Display the lines in `displayLines`
     for (let i = 0; i < displayLines.length; i++) {
       let line = displayLines[i];
