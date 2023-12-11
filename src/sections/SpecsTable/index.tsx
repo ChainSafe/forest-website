@@ -78,16 +78,16 @@ export default function SpecsTable() {
           </thead>
         <tbody className="divide-y divide-stone-900">
         <tr>
-          {specs.map((item, index) => <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-stone-300 sm:pl-0" key={index + item.col.cpu}>{item.col.cpu}</td>)}
+          {specs.map((item, index) => <td className="whitespace-nowrap py-4 pl-4 pr-3 text-md font-medium text-stone-300 sm:pl-0" key={index + item.col.cpu}>{item.col.cpu}</td>)}
         </tr>
         <tr>
-          {specs.map((item, index) => <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-stone-300 sm:pl-0" key={item.col.ram + index}>{item.col.ram}</td>)}
+          {specs.map((item, index) => <td className="whitespace-nowrap py-4 pl-4 pr-3 text-md font-medium text-stone-300 sm:pl-0" key={item.col.ram + index}>{item.col.ram}</td>)}
         </tr>
         <tr>
-          {specs.map((item, index) => <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-stone-300 sm:pl-0" key={item.col.ssd + index}>{item.col.ssd}</td>)}
+          {specs.map((item, index) => <td className="whitespace-nowrap py-4 pl-4 pr-3 text-md font-medium text-stone-300 sm:pl-0" key={item.col.ssd + index}>{item.col.ssd}</td>)}
         </tr>
         <tr>
-          {specs.map((item, index) => <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-stone-300 sm:pl-0" key={item.col.gpu + index}>{item.col.gpu}</td>)}
+          {specs.map((item, index) => <td className="whitespace-nowrap py-4 pl-4 pr-3 text-md font-medium text-stone-300 sm:pl-0" key={item.col.gpu + index}>{item.col.gpu}</td>)}
         </tr>
         </tbody>
         </table>

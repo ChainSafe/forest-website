@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local';
+import {Inconsolata} from 'next/font/google'
+import './globals.css'
 
-const neueMontreal = localFont({
+export const neueMontreal = localFont({
+  weight: '400',
   src: [
     {
       path: './fonts/NeueMontreal-Light.woff2',
@@ -19,9 +22,10 @@ const neueMontreal = localFont({
       style: 'normal',
     },
   ],
+  variable: '--font-nm',
 });
 
-import './globals.css'
+export const inconsolata = Inconsolata({ weight: ["400", "500"], subsets: ["latin"], variable: "--font-mono" } );
 
 
 export const metadata: Metadata = {
@@ -36,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={neueMontreal.className}>{children}</body>
+      <body className={`${neueMontreal.variable} ${inconsolata.variable}`}>{children}</body>
     </html>
   )
 }

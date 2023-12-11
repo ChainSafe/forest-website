@@ -1,4 +1,4 @@
-m"use client" 
+"use client" 
 
 import Sketch from "react-p5"
 import P5 from 'p5';
