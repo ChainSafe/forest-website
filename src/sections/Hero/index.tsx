@@ -5,7 +5,7 @@ import Button from "@/components/Button"
 
 export default function Hero() {
   return (
-    <div className="relative md:min-h-[80vh] h-full">
+    <div className="relative md:min-h-[80vh] h-full px-4 md:px-8">
       <div className="relative flex flex-col max-w-7xl py-24">
         <img className='max-w-[60%] opacity-20' src="fullmark.png" alt="" />
         
@@ -13,7 +13,7 @@ export default function Hero() {
           <h1 className="md:max-w-[680px]  text-6xl text-white">
             Premier Rust implementation for the Filecoin Protocol
           </h1>
-          <h3 className='md:max-w-[380px] mt-3 text-3xl text-gray-400 tracking-tight'>Run Forest to access Filecoin, the decentralized storage network.</h3>
+          <h3 className='md:max-w-[380px] mt-3 text-3xl text-stone-300 tracking-tight'>Run Forest to access Filecoin, the decentralized storage network.</h3>
         </div>
         <div className="py-4 flex items-center">
           <Button className="mr-2" type="primary" href="#">Install</Button>

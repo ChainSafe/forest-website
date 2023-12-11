@@ -31,6 +31,13 @@ const config: Config = {
           '1.85rem', {
             lineHeight: '1.9rem',
           }
+        ],
+        '2xl': [
+          '1.5rem', {
+            lineHeight: '1.7rem',
+            letterSpacing: '0.01rem',
+            fontWeight: '300'
+          }
         ]
       }
     },

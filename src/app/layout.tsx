@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import localFont from 'next/font/local';
 
 const neueMontreal = localFont({
   src: [
+    {
+      path: './fonts/NeueMontreal-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
     {
       path: './fonts/NeueMontreal-Regular.woff2',
       weight: '400',
