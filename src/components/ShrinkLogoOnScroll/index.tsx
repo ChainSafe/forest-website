@@ -65,7 +65,7 @@ export const ShrinkLogoOnScroll = () => {
               "--x": logoX
             })}
           >
-            <img src="/logo.png" className="h-auto w-[80%]" />
+            <img src="/logo.png" className="h-auto w-[80%]" alt=""/>
            
           </motion.div>
         </div>
