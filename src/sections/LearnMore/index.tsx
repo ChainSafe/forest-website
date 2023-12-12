@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
 import Button from "@/components/Button"
+import YoutubeEmbed from "@/components/YoutubeEmbed"
 import { IconArrowUpRight } from "@tabler/icons-react"
 
 const processes = [
@@ -25,18 +26,8 @@ export default function LearnMore() {
           Learn more about Forest
         </h2>
         <div className='grid md:grid-cols-2 gap-y-2 py-4 gap-x-1 '>
-          {processes.map((card, index) => (
-          <div key={index} className='transition-all py-8 flex flex-col justify-start' >
-            <div className='bg-neutral-950 h-[300px]'>
-              {/* process */}
-              </div>
-              <div className='px-2'>
-                <h3 className='mt-1 md:mt-3 text-gray-300 text-xl leading-7 max-w-[80%]'>{card.desc}</h3>
-                {card.calibnetCommand ? (<h3 className='mt-1 md:mt-3 text-xl leading-6 text-brand-400 font-mono max-w-[80%]'><span className="text-lg font-sans text-gray-300">On calibnet: </span> {card.calibnetCommand}</h3>) : ''}
-                <h3 className='mt-1 md:mt-1 text-brand-400 text-xl leading-6 font-mono max-w-[80%]'><span className="text-lg font-sans text-gray-300">On mainnet: </span> {card.mainnetCommand}</h3>
-              </div>
-          </div>
-        ))}
+          <YoutubeEmbed embedId="GZ9VhCveRdA?si=CLGrynFjjM75flir" />
+          <YoutubeEmbed embedId="9PZbsF0ah64?si=XN-_T0yzO2OiHVeg" />
         </div>
         </div>
     </div>

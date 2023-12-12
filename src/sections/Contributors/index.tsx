@@ -28,7 +28,7 @@ export default function Contributors() {
             </div>
           </div>
         </div>
-        <div className='grid content-center justify-center gap-x-2 gap-y-2 grid-cols-8 md:grid-cols-10 lg:grid-cols-12'>
+        <div className='grid content-center justify-center gap-x-2 gap-y-2 grid-cols-8 md:grid-cols-10'>
           {contributors && contributors.map((c) => (
             <a className='transition-all pb-2 hover:brightness-75' key={c.id} href={c.html_url} target="_blank" rel="noopener noreferrer">
               <img src={c.avatar_url} alt={c.id} className="rounded-md w-auto min-h-12" />
