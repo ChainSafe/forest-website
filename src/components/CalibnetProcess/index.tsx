@@ -110,7 +110,7 @@ const sketch: Sketch = (p5) => {
 
 
   p5.setup = () => {
-    p5.createCanvas(720, 300)
+    p5.createCanvas(720, 280)
     p5.textFont("monospace");
     p5.textSize(11);
     p5.fill(255);
@@ -127,7 +127,7 @@ const sketch: Sketch = (p5) => {
     }
 
     // first, mock up a user typing out command
-    p5.background("#121212");
+    p5.background("#0f0f0f");
     drawCommand(p5);
 
     // next, print logs 2 seconds after command is typed
@@ -145,5 +145,5 @@ const sketch: Sketch = (p5) => {
 };
 
 export default function CalibnetProcess() {
-  return <NextReactP5Wrapper sketch={sketch} className='border-2 border-amber-100' />;
+  return <NextReactP5Wrapper sketch={sketch} />;
 }

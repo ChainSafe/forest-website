@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
 import Button from "@/components/Button"
+import YoutubeEmbed from "@/components/YoutubeEmbed"
 import { IconArrowUpRight } from "@tabler/icons-react"
 
 const processes = [
@@ -25,14 +26,8 @@ export default function LearnMore() {
           Learn more about Forest
         </h2>
         <div className='grid md:grid-cols-2 gap-y-2 py-4 gap-x-1 '>
-          {processes.map((card, index) => (
-          <div key={index} className='transition-all py-8 flex flex-col justify-start' >
-            <div className='bg-neutral-950 h-[300px]'>
-              {/* embed youtube */}
-              </div>
-              
-          </div>
-        ))}
+          <YoutubeEmbed embedId="GZ9VhCveRdA?si=CLGrynFjjM75flir" />
+          <YoutubeEmbed embedId="9PZbsF0ah64?si=XN-_T0yzO2OiHVeg" />
         </div>
         </div>
     </div>
