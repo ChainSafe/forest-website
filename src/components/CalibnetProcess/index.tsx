@@ -1,80 +1,83 @@
 "use client"
 
-import Sketch from "react-p5"
+import React from "react";
+import { type Sketch } from "@p5-wrapper/react";
+import { NextReactP5Wrapper } from "@p5-wrapper/next";
 import terminalText from "./logs";
 
-export default function CalibnetProcess() {
+const sketch: Sketch = (p5) => {
 
-  let displayLines: string[] = [];
-  let currentLine = 0;
-  let frameCounter = 0;
-  let maxDisplayLines:number;
-
+  // vars related to typing the command:
   let command = "forest --chain calibnet";
   let typedText = "";
   let cursorBlink = true;
   let cursorPosition = 0;
   let typingSpeed = 80; // Milliseconds between each character
   let lastTypedTime = 0;
+
+  // vars related to restarting animation
+  let startTime = 0;
+  let delayStartTime = 0; // New variable to track the start time for the delay
+  let isDelayCompleted = false; // 
+
+  // vars related to printing output
   let duration = 148116;
-  let resetTime = 0;
+  let displayLines:string[] = [];
+  let currentLine = 0;
+  let frameCounter = 0;
+  let maxDisplayLines = 10;
   let nextTime = 30;
   let currentTime = new Date("1970-01-01 " + terminalText[0].split(" ", 1)[0]).getTime();
 
-function setup(p5: any, parent: Element) {
-  p5.createCanvas(800, 300).parent(parent);
-  p5.background(0);
-  p5.textFont("monospace");
-  p5.textSize(11);
-  p5.fill(255);
-  // defines how many lines will be printed before scrolling.
-  maxDisplayLines = 10;
-}
+  function drawCursor(p5: any) {
+    if (p5.frameCount % 30 === 0) { // Blinking effect every second
+      cursorBlink = !cursorBlink;
+    }
+    // don't show cursor after typing command
+    if (p5.millis() > 2000) {
+      cursorBlink = false;
+      p5.stroke(0);
+    }
 
-function draw(p5:any) {
-  p5.background(0);
-  drawTypingText(p5);
-  drawCursor(p5);
-  if (p5.millis() > 2000) {
-    printLogs(p5);
+    if (cursorBlink) {
+      let cursorX = p5.textWidth(typedText) + 12;
+      p5.stroke(255);
+      p5.line(cursorX, 15, cursorX, 35);
+    }
   }
 
-  if (p5.millis() > resetTime + duration) {
-    restartAnimation(p5);
-  }
-}
-
-function drawTypingText(p5:any) {
-  if (p5.millis() - lastTypedTime > typingSpeed && cursorPosition < command.length) {
-    typedText += command.charAt(cursorPosition);
-    cursorPosition++;
-    lastTypedTime = p5.millis();
-  }
-  p5.text(typedText, 10, 30);
-}
-
-function drawCursor(p5: any) {
-  if (p5.frameCount % 30 === 0) { // Blinking effect every second
-    cursorBlink = !cursorBlink;
-  }
-  // don't show cursor after typing command
-  if (p5.millis() > 2000) {
-    cursorBlink = false;
-    p5.stroke(0);
+  function drawCommand(p5: any) {
+    if (p5.millis() - lastTypedTime > typingSpeed && cursorPosition < command.length) {
+      typedText += command.charAt(cursorPosition);
+      cursorPosition++;
+      lastTypedTime = p5.millis();
+    }
+    p5.text(typedText, 10, 30);
+    drawCursor(p5);
   }
 
-  if (cursorBlink) {
-    let cursorX = p5.textWidth(typedText) + 12;
-    p5.stroke(255);
-    p5.line(cursorX, 15, cursorX, 35);
-  }
-}
 
-function printLogs(p5:any) {
-  // Increment frameCounter and check if it's time to move to the next line
-  frameCounter++;
-  // print a new line every 30 frames
-  if (frameCounter > nextTime) {
+  function restart(p5:any) {
+    // Reset vars for typing command
+    typedText = "";
+    cursorPosition = 0;
+    cursorBlink = true;
+
+    // Reset vars for printing logs
+    displayLines = [];
+    currentLine = 0;
+    frameCounter = 0;
+    startTime = p5.millis(); // Resetting start time for next loop
+    delayStartTime = p5.millis(); // Resetting the delay start time
+
+    isDelayCompleted = false;
+  }
+
+  function printLogs(p5:any) {
+    // Increment frameCounter and check if it's time to move to the next line
+    frameCounter++;
+    // print a new line every 30 frames
+    if (frameCounter > nextTime) {
 
     // If there's a new line in terminalText, push it to displayLines
     if (currentLine < terminalText.length) {
@@ -105,15 +108,42 @@ function printLogs(p5:any) {
     }
  }
 
-function restartAnimation(p5:any) {
-  resetTime = p5.millis();
-  p5.frameCount = 0;
-  lastTypedTime = 0;
-  displayLines = [];
-}
-  return (
-    <div className="border-2 border-gray-600 flex items-center">
-      <Sketch setup={setup} draw={draw} />
-    </div>
-  )
+
+  p5.setup = () => {
+    p5.createCanvas(720, 300)
+    p5.textFont("monospace");
+    p5.textSize(11);
+    p5.fill(255);
+  };
+
+  p5.draw = () => {
+
+    // log current time
+    let currentTime = p5.millis();
+
+    // this kind of works like a % fn: reset all variables if a lap has been run.
+    if (currentTime - startTime > duration) {
+      restart(p5);
+    }
+
+    // first, mock up a user typing out command
+    p5.background("#121212");
+    drawCommand(p5);
+
+    // next, print logs 2 seconds after command is typed
+    if (!isDelayCompleted) {
+      if (currentTime - delayStartTime > 2000) {
+        isDelayCompleted = true;
+      }
+    } else {
+      printLogs(p5);
+    }
+  
+  };
+
+  
+};
+
+export default function CalibnetProcess() {
+  return <NextReactP5Wrapper sketch={sketch} className='border-2 border-amber-100' />;
 }

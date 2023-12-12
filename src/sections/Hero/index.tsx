@@ -13,7 +13,7 @@ export default function Hero() {
           <h1 className="md:max-w-[680px]  text-6xl text-neutral-300">
             Premier Rust implementation for the Filecoin Protocol
           </h1>
-          <h3 className='md:max-w-[380px] mt-3 text-3xl text-neutral-500 tracking-tight'>Run Forest to access Filecoin, the decentralized storage network.</h3>
+          <h3 className='md:max-w-[380px] mt-3 text-3xl text-neutral-400 tracking-tight'>Run Forest to access Filecoin, the decentralized storage network.</h3>
         </div>
         <div className="py-4 flex items-center">
           <Button className="mr-2" type="primary" href="#">Install</Button>

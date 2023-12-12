@@ -8,24 +8,23 @@ import Button from '@/components/Button';
 export default function Contributors() {
   
   const { contributors } = useContributors();
-  console.log(contributors);
+
   return (
     <div className='relative h-full w-full max-w-screen-xl mx-auto py-8'>
-      <div className="relative grid grid-cols-2 px-8 py-14">
-        <div className='relative flex flex-col justify-center md:pt-0 items-start'>
+      <div className="relative grid md:grid-cols-2 px-8 md:py-14">
+        <div className='relative flex flex-col justify-center md:pt-0 items-start py-4'>
           <h1 className='mt-7 text-green-500 text-5xl font-normal'>
             The seeds of Forest
           </h1>
-          <h2 className='mt-3 md:max-w-[600px] text-neutral-400 text-xl font-normal'>
+          <h2 className='mt-3 md:max-w-[600px] text-neutral-300 text-xl font-normal'>
            Thank you for your incredible contributions to Filecoin.
           </h2>
-          <div className='flex flex-col pt-16'>
+          <div className='flex flex-col py-4 md:pt-16 md:py-0' >
             <h3 className='text-neutral-200 text-xl font-normal'>
               Join the team!
             </h3>
             <div className='flex gap-x-3 pt-3'>
-              <Button className='' type='primary' href="http://chainsafe.io/careers">Open Positions</Button>
-              {/* <Button className='' type='secondary' href="">Contribution Guidelines</Button> */}
+              <Button type='primary' href="http://chainsafe.io/careers">Open Positions</Button>
             </div>
           </div>
         </div>
