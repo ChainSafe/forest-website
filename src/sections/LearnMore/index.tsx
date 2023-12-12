@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
-import Button from "@/components/Button"
 import YoutubeEmbed from "@/components/YoutubeEmbed"
-import { IconArrowUpRight } from "@tabler/icons-react"
 
 const processes = [
   {

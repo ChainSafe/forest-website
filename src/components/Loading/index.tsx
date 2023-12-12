@@ -1,4 +1,5 @@
 "use client" 
+/* eslint-disable @next/next/no-img-element */
 
 import { stylesWithCssVar } from "@/utils/useCssVar";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -117,12 +118,12 @@ export const Loading = () => {
               "--scale": loadingScreenscale,
             })}
           >
-            <img src="/loading-screen.svg" className="h-auto w-full" />
+            <img src="/loading-screen.svg" className="h-auto w-full" alt="" />
             <motion.div
               // style={{ opacity: newBranchOpacity }}
               className="absolute inset-0"
             >
-              <img src="/main-screen.svg" className="h-auto w-full" />
+              <img src="/main-screen.svg" className="h-auto w-full" alt=""/>
             </motion.div>
             <motion.span
               className="mt-3 block text-2xl text-white"

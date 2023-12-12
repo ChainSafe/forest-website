@@ -1,4 +1,5 @@
 "use client" 
+/* eslint-disable @next/next/no-img-element */
 
 import { stylesWithCssVar } from "@/utils/useCssVar";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -64,7 +65,7 @@ export const ShrinkLogoOnScroll = () => {
               "--x": logoX
             })}
           >
-            <img src="/logo.png" className="h-auto w-[80%]" />
+            <img src="/logo.png" className="h-auto w-[80%]" alt=""/>
            
           </motion.div>
         </div>

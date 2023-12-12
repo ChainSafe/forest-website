@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 import {Inconsolata} from 'next/font/google'
 import './globals.css'
 
-export const neueMontreal = localFont({
+const neueMontreal = localFont({
   weight: '400',
   src: [
     {
@@ -25,7 +25,7 @@ export const neueMontreal = localFont({
   variable: '--font-nm',
 });
 
-export const inconsolata = Inconsolata({ weight: ["400", "500"], subsets: ["latin"], variable: "--font-mono" } );
+const inconsolata = Inconsolata({ weight: ["400", "500"], subsets: ["latin"], variable: "--font-mono" } );
 
 
 export const metadata: Metadata = {
