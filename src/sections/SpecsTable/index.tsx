@@ -74,7 +74,7 @@ export default function SpecsTable() {
         </h2>
         <table className='w-full divide-y divide-emerald-800 table-auto md:table-fixed'>
           <thead>
-            {specs.map((title, index) => <th className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-stone-400 sm:pl-0" scope="col" key={index}>{title.name}</th>)}
+            {specs.map((title, index) => <th className="py-3.5 pl-4 pr-3 text-left text-lg font-semibold text-stone-400 sm:pl-0" scope="col" key={index}>{title.name}</th>)}
           </thead>
         <tbody className="divide-y divide-stone-900">
         <tr>
