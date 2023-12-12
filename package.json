@@ -2,7 +2,7 @@
   "name": "forest-website",
   "version": "0.1.0",
   "private": true,
-  "node_version": "16.19.0",
+  "node_version": "18.17.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
