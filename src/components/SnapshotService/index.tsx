@@ -59,7 +59,7 @@ export default function SnapshotService() {
         </div>
          {/* Download Snapshots */}
           <div className="grid md:grid-cols-3 py-4">
-            <div className='flex flex-col col-span-2'>
+            <div className='flex flex-col md:col-span-2'>
               <h1 className='mt-7 text-green-500 text-2xl font-normal'>
                 Download latest snapshots
               </h1>
