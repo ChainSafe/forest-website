@@ -1,4 +1,5 @@
 "use client" 
+/* eslint-disable @next/next/no-img-element */
 
 import { stylesWithCssVar } from "@/utils/useCssVar";
 import { useScroll, useTransform, motion } from "framer-motion";
