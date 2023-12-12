@@ -10,10 +10,10 @@ export default function Hero() {
         <img className='max-w-[60%] opacity-20' src="fullmark.png" alt="" />
         
         <div className='mt-7 flex flex-col sm:flex-row justify-start items-start'>
-          <h1 className="md:max-w-[680px]  text-6xl text-white">
+          <h1 className="md:max-w-[680px]  text-6xl text-neutral-300">
             Premier Rust implementation for the Filecoin Protocol
           </h1>
-          <h3 className='md:max-w-[380px] mt-3 text-3xl text-stone-300 tracking-tight'>Run Forest to access Filecoin, the decentralized storage network.</h3>
+          <h3 className='md:max-w-[380px] mt-3 text-3xl text-neutral-500 tracking-tight'>Run Forest to access Filecoin, the decentralized storage network.</h3>
         </div>
         <div className="py-4 flex items-center">
           <Button className="mr-2" type="primary" href="#">Install</Button>

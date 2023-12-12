@@ -24,12 +24,13 @@ const config: Config = {
         '6xl': [
           '3.5rem', {
             lineHeight: '3.6rem',
-            letterSpacing: '-0.15rem'
+            letterSpacing: '-0.07rem'
           }
         ],
         '3xl': [
           '1.85rem', {
-            lineHeight: '1.9rem',
+            lineHeight: '2rem',
+            letterSpacing: '-0.01rem'
           }
         ],
         '2xl': [

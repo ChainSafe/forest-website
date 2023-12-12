@@ -17,12 +17,12 @@ const processes = [
   
 ]
 
-export default function RunningNode() {
+export default function LearnMore() {
   return (
     <div className="relative h-full w-full  md:min-h-[70vh]">
       <div className="relative flex flex-col justify-center pt-16 pb-6 px-8">
         <h2 className='mt-7 text-neutral-200 text-5xl text-center font-normal'>
-          Running a Node
+          Learn more about Forest
         </h2>
         <div className='grid md:grid-cols-2 gap-y-2 py-4 gap-x-1 '>
           {processes.map((card, index) => (

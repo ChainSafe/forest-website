@@ -24,19 +24,19 @@ const cards = [
 
 export default function Documentation() {
   return (
-    <div className="relative h-full w-full  md:min-h-[70vh]">
+    <div className="relative h-full w-full  md:min-h-[50vh]">
       <div className="relative flex flex-col justify-center py-14 px-8">
         <h2 className='mt-7 text-white text-5xl font-normal'>
           Documentation
         </h2>
         <div className='grid md:grid-cols-2 gap-y-2 lg:grid-cols-3 py-8 gap-x-2 '>
           {cards.map((card, index) => (
-          <a href={card.link} key={index} className='transition-all py-10 flex flex-col justify-start px-5 bg-bg rounded-3xl cursor-pointer hover:-translate-y-1 hover:brightness-75 opacity-80' rel="noopener noreferrer" target="_blank">
+          <a href={card.link} key={index} className='transition-all py-10 flex flex-col justify-start px-5 bg-neutral-900 rounded-3xl cursor-pointer hover:-translate-y-1 hover:brightness-75 opacity-80' rel="noopener noreferrer" target="_blank">
             <div className='flex justify-between'>
             <h2 className='text-3xl font-light text-white'>{card.title}</h2>
             <Button href={card.link} type="link"><IconArrowUpRight stroke={1.5} className="text-brand-400" width={24}/></Button>
             </div>
-            <h3 className='mt-8 md:mt-16 text-gray-100 text-xl leading-6 font-light max-w-[80%]'>{card.desc}</h3>
+            <h3 className='mt-8 md:mt-16 text-gray-100 text-xl leading-7 max-w-[80%]'>{card.desc}</h3>
           </a>
         ))}
         </div>
