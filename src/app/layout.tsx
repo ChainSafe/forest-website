@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local';
 import {Inconsolata} from 'next/font/google'
 import './globals.css'
+import ClientLoaded from './client';
 
 const neueMontreal = localFont({
   weight: '400',
@@ -78,7 +79,7 @@ export const metadata: Metadata = {
      },
   },
   
-  // metadataBase: new URL('https://acme.com'),
+  metadataBase: new URL('https://forest.chainsafe.io'),
   alternates: {
     canonical: '/',
     languages: {
@@ -98,7 +99,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${neueMontreal.variable} ${inconsolata.variable}`}>{children}</body>
+      <body className={`${neueMontreal.variable} ${inconsolata.variable}`}>
+        <ClientLoaded>
+          {children}
+        </ClientLoaded>
+      </body>
     </html>
   )
 }

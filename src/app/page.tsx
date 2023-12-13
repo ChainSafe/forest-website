@@ -8,21 +8,23 @@ import Contributors from '@/sections/Contributors'
 import Documentation from '@/sections/Documentation'
 import Downloads from '@/sections/Downloads'
 import Hero from '@/sections/Hero'
-import Hero2 from '@/sections/Hero2'
+import Hero3 from '@/sections/Hero3'
 import LearnMore from '@/sections/LearnMore'
 import RunningNode from '@/sections/RunningNode'
 import SpecsTable from '@/sections/SpecsTable'
+import SpecsTable2 from '@/sections/SpecsTable2'
 import Team from '@/sections/Team'
 import WithForestYouCan from '@/sections/WithForestYouCan'
+import WithForestYouCan2 from '@/sections/WithForestYouCan2'
 
 export default function Home() {
   return (
-    <main className="flex flex-col py-4">
+    <main className="flex flex-col">
       <Navbar />
-      <Hero2 />
-      <WithForestYouCan />
+      <Hero3 />
+      <WithForestYouCan2 />
       <BetaTesters />
-      {/* <SpecsTable /> */}
+      <SpecsTable2 />
       <Downloads />
       <Binaries />
       <RunningNode />
