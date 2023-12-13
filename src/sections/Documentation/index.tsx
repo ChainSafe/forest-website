@@ -24,7 +24,7 @@ const cards = [
 
 export default function Documentation() {
   return (
-    <div className="relative h-full w-full  md:min-h-[50vh]">
+    <div className="relative h-full w-full  md:min-h-[50vh]" id="documentation">
       <div className="relative flex flex-col justify-center py-14 px-8">
         <h2 className='mt-7 text-white text-5xl font-normal'>
           Documentation

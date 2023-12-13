@@ -12,6 +12,7 @@ import Hero3 from '@/sections/Hero3'
 import LearnMore from '@/sections/LearnMore'
 import RunningNode from '@/sections/RunningNode'
 import SpecsTable from '@/sections/SpecsTable'
+import SpecsTable2 from '@/sections/SpecsTable2'
 import Team from '@/sections/Team'
 import WithForestYouCan from '@/sections/WithForestYouCan'
 import WithForestYouCan2 from '@/sections/WithForestYouCan2'
@@ -23,7 +24,7 @@ export default function Home() {
       <Hero3 />
       <WithForestYouCan2 />
       <BetaTesters />
-      <SpecsTable />
+      <SpecsTable2 />
       <Downloads />
       <Binaries />
       <RunningNode />

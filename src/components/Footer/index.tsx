@@ -21,7 +21,7 @@ export const navigation = {
     { name: 'Careers', href: 'https://chainsafe.io/careers' },
     {
       name: 'Brand Assets',
-      href: '/forest-brand-assets.zip',
+      href: '/forest-logo-mini.zip',
     },
   ],
   reach: [

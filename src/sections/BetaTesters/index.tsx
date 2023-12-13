@@ -45,14 +45,14 @@ export default function BetaTesters() {
         <h2 className='mt-7 text-brand-400 text-5xl font-normal'>
           The Forest beta awaits testers
         </h2>
-        <motion.h2 className='mt-3 md:max-w-[600px] text-neutral-200 text-2xl font-normal'        initial="hidden" viewport={{ once: true }} animate={controls} variants={sentenceVariant}>
+        <motion.h2 className='mt-3 md:max-w-[600px] text-neutral-200 text-2xl font-normal' initial="hidden" viewport={{ once: true }} animate={controls} variants={sentenceVariant}>
           {splitSentence.map((char, index) => (
               <motion.span key={index} variants={letterVariant}>
                 {char}{' '}
               </motion.span>
             ))}
         </motion.h2>
-        <img className='hidden lg:inline-block absolute z-0 h-[80%] right-1 top-[15%]' src="/logo-symbol2.png" alt="" />
+        <img className='hidden lg:inline-block absolute z-0 h-[80%] right-1 top-[15%]' src="/symbol-cropped.png" alt="" />
           <div className='grid md:grid-cols-2 gap-y-2 lg:grid-cols-4 py-8 gap-x-2 z-10 max-w-[85%] '>
           {cards.map((card, index) => (
             <a href={card.link} key={index} className='transition-all py-10 flex flex-col justify-start px-5 bg-neutral-900 rounded-3xl cursor-pointer hover:-translate-y-1 hover:brightness-75 opacity-90' rel="noopener noreferrer" target="_blank">

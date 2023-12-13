@@ -26,3 +26,23 @@ body {
     rgb(var(--background-start-rgb));
     font-family: var(--font-nm);
 }
+
+.tr-styles {
+  @apply whitespace-nowrap py-4 pl-4 pr-3 text-xl font-medium text-gray-400 sm:pl-0
+}
+
+.stat-wrapper {
+  @apply flex flex-col items-center bg-neutral-900 py-4 px-2 rounded-lg min-w-full lg:min-w-[150px]
+}
+
+.stat-header {
+  @apply text-lg text-neutral-300
+}
+
+.stat-desc {
+  @apply text-sm text-neutral-400
+}
+
+.btn-link {
+  @apply cursor-pointer mr-2 transition-all rounded-full border-[1px] px-8 py-1 text-lg font-medium shadow-sm hover:brightness-[80%]
+}

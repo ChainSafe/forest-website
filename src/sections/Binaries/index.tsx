@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
-import { IconWallet, IconLockSquareRounded, IconArrowsRightLeft, IconNewSection } from "@tabler/icons-react"
+import { parentVariant, childVariants } from "@/styles/animations"
+import { motion } from "framer-motion"
+
 
 const properties = [
   {
@@ -28,16 +30,20 @@ export default function Binaries() {
         <h2 className='mt-7 text-neutral-200 text-4xl md:text-5xl'>
           Forest comes with different command-line binaries.
           </h2>
-          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-x-2 md:px-12 md:py-20'>
+          <motion.div
+            variants={parentVariant}
+            initial='offscreen'
+            whileInView='onscreen'
+            transition={{ duration: 1.2, delay: 0.8 }} className='grid md:grid-cols-2 lg:grid-cols-4 gap-x-2 md:px-12 md:py-20'>
           {properties.map((card, index) => (
-            <div key={index} className='py-4 flex flex-col justify-start md:justify-self-center'>
+            <motion.div key={index} variants={childVariants} className='py-4 flex flex-col justify-start md:justify-self-center'>
               <div className='rounded-xl px-6 py-3 text-xl bg-neutral-950 bg-opacity-60 text-brand-200 font-mono w-48 text-center'>
                 {card.title}
               </div>
               <h3 className='mt-2 md:mt-7 text-gray-300 text-xl leading-6 max-w-[85%]'>{card.desc}</h3>
-            </div>
+            </motion.div>
           ))}
-          </div>
+          </motion.div>
   
         </div>
     </div>
