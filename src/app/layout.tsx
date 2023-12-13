@@ -100,9 +100,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${neueMontreal.variable} ${inconsolata.variable}`}>
-        <ClientLoaded>
-          {children}
-        </ClientLoaded>
+        {children}
       </body>
     </html>
   )

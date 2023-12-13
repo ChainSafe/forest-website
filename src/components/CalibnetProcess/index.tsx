@@ -5,13 +5,12 @@ import { type Sketch } from "@p5-wrapper/react";
 import terminalText from "./logs";
 import p5 from "p5";
 
-
 export default function CalibnetProcess() {
   const parentRef = useRef<HTMLDivElement>(null);
 
   // eww i had to put everything in a useEffect to make animation responsive :(
   useEffect(() => {
-
+    
     let myp5: p5;
 
     const sketch: Sketch = (p5) => {
@@ -63,7 +62,6 @@ export default function CalibnetProcess() {
         p5.text(typedText, 10, 30);
         drawCursor(p5);
       }
-
 
       function restart(p5:p5) {
         // Reset vars for typing command
@@ -131,7 +129,6 @@ export default function CalibnetProcess() {
     };
 
     p5.draw = () => {
-
       // log current time
       let currentTime = p5.millis();
 
@@ -159,14 +156,12 @@ export default function CalibnetProcess() {
         const parentWidth = parentRef.current.clientWidth;
         p5.resizeCanvas(parentWidth, 270);
       }
-  
     }
   }; 
   
   // only render the sketch if parent element is in the DOM
   if (parentRef.current) {
       myp5 = new p5(sketch);
-
   }
     
   return () => {
@@ -174,6 +169,5 @@ export default function CalibnetProcess() {
   }
 }, [])
   
-
   return (<div ref={parentRef}></div>);
 }

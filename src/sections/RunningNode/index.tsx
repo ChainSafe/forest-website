@@ -1,5 +1,12 @@
 "use client"
-import CalibnetProcess from "@/components/CalibnetProcess"
+
+import dynamic from "next/dynamic";
+
+
+const CalibnetProcessNoSSR = dynamic(
+  () => import('@/components/CalibnetProcess'),
+  { ssr: false }
+)
 
 const processes = [
   {
@@ -24,7 +31,7 @@ export default function RunningNode() {
         <div className='grid lg:grid-cols-2 gap-y-2 py-4 gap-x-1 '>
           {processes.map((card, index) => (
           <div key={index} className='transition-all py-8 flex flex-col justify-start' >
-            <CalibnetProcess />
+            <CalibnetProcessNoSSR />
             <div className='px-2'>
               <h3 className='mt-1 md:mt-3 text-gray-300 text-xl leading-7 max-w-[80%]'>{card.desc}</h3>
               {card.calibnetCommand ? (<h3 className='mt-1 md:mt-3 text-xl leading-6 text-brand-400 font-mono max-w-[80%]'><span className="text-lg font-sans text-gray-300">On calibnet: </span> {card.calibnetCommand}</h3>) : ''}
