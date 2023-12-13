@@ -35,15 +35,10 @@ const GradientCursor = (props: Props) => {
   const gradientCursorStyles = `before:absolute before:inset-0 before:z-0 before:bg-[radial-gradient(circle_farthest-side_at_var(--x,_10px)_var(--y,_5px),#5CBB55_0%,_transparent_100%)] before:opacity-30`;
 
   return (
-    <div className='bg-black'>
     <motion.div
       ref={targetRef}
-      className={`my-24 h-full w-full py-24 px-11 ${gradientCursorStyles} max-w-3xl`}>
+      className={`${gradientCursorStyles} w-2`}>
     </motion.div>
-        <h3 className="mx-auto text-center text-6xl font-medium text-white md:mx-auto lg:max-w-[80%]">
-          How to start building with Forest
-        </h3>
-    </div>
 
   );
 };

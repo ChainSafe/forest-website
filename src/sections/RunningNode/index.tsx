@@ -1,9 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client"
-import Button from "@/components/Button"
 import CalibnetProcess from "@/components/CalibnetProcess"
-import { IconArrowUpRight } from "@tabler/icons-react"
-import { useRef } from "react"
 
 const processes = [
   {
@@ -19,8 +15,6 @@ const processes = [
 ]
 
 export default function RunningNode() {
-
-  const parentRef = useRef(null);
   return (
     <div className="relative h-full w-full  md:min-h-[70vh]">
       <div className="relative flex flex-col justify-center pt-16 pb-6 px-8">
@@ -30,9 +24,7 @@ export default function RunningNode() {
         <div className='grid lg:grid-cols-2 gap-y-2 py-4 gap-x-1 '>
           {processes.map((card, index) => (
           <div key={index} className='transition-all py-8 flex flex-col justify-start' >
-            <div className='w-full h-auto'>
-              <CalibnetProcess />
-            </div>
+            <CalibnetProcess />
             <div className='px-2'>
               <h3 className='mt-1 md:mt-3 text-gray-300 text-xl leading-7 max-w-[80%]'>{card.desc}</h3>
               {card.calibnetCommand ? (<h3 className='mt-1 md:mt-3 text-xl leading-6 text-brand-400 font-mono max-w-[80%]'><span className="text-lg font-sans text-gray-300">On calibnet: </span> {card.calibnetCommand}</h3>) : ''}

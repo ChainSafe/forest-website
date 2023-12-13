@@ -29,8 +29,66 @@ const inconsolata = Inconsolata({ weight: ["400", "500"], subsets: ["latin"], va
 
 
 export const metadata: Metadata = {
-  title: 'Forest Website',
-  description: 'The Rust implementation of the Filecoin Protocol',
+  title: 'Forest - Filecoin implemented in Rust',
+  description: 'Run Forest to validate the Filecoin blockchain, generate snapshots, send and receive FIL and more.',
+  icons: {
+    icon: './favicon.ico',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Forest',
+    description: 'The Filecoin Implementation in Rust',
+    // siteId: '1467726470533754880',
+    // creator: '@nextjs',
+    // creatorId: '1467726470533754880',
+    images: ['https://nextjs.org/og.png'],
+  },
+   openGraph: {
+    title: 'Forest',
+    description: 'The Filecoin Implementation in Rust',
+    url: 'https://forest.chainsafe.io',
+    siteName: 'Forest',
+    // images: [
+    //   {
+    //     url: 'https://nextjs.org/og.png',
+    //     width: 800,
+    //     height: 600,
+    //   },
+    //   {
+    //     url: 'https://nextjs.org/og-alt.png',
+    //     width: 1800,
+    //     height: 1600,
+    //     alt: 'My custom alt',
+    //   },
+    // ],
+    locale: 'en_US',
+    type: 'website',
+  },
+   robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+     },
+  },
+  
+  // metadataBase: new URL('https://acme.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'de-DE': '/de-DE',
+    },
+  },
+  // openGraph: {
+  //   images: '/og-image.png',
+  // },
 }
 
 export default function RootLayout({

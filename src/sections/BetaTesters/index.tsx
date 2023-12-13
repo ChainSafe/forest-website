@@ -2,6 +2,10 @@
 "use client"
 import Button from "@/components/Button"
 import { IconArrowUpRight } from "@tabler/icons-react"
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from "react";
+import { useInView } from 'react-intersection-observer';
+import { sentenceVariant, letterVariant, splitText } from "@/styles/animations";
 
 const cards = [
   {
@@ -23,15 +27,31 @@ const cards = [
 ]
 
 export default function BetaTesters() {
+  const controls = useAnimation();
+
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+
+  const splitSentence = splitText(`Join our beta program early and give the team feedback on your Filecoin use cases to be respected on the development roadmap.`)
   return (
-    <div className="relative h-full w-full md:min-h-[70vh]">
-      <div className="relative flex flex-col justify-center py-14 px-8">
-        <h2 className='mt-7 text-neutral-300 text-5xl font-normal'>
+    <div ref={ref} className="relative w-full md:min-h-[70vh]" id="beta-program">
+      <div className="relative flex flex-col justify-center py-14 lg:pt-32 px-8">
+        <h2 className='mt-7 text-brand-400 text-5xl font-normal'>
           The Forest beta awaits testers
         </h2>
-        <h2 className='mt-3 md:max-w-[600px] text-neutral-500 text-2xl font-normal'>
-          Join our beta program early and give the team feedback on your Filecoin use cases to be respected on the development roadmap.
-        </h2>
+        <motion.h2 className='mt-3 md:max-w-[600px] text-neutral-200 text-2xl font-normal'        initial="hidden" viewport={{ once: true }} animate={controls} variants={sentenceVariant}>
+          {splitSentence.map((char, index) => (
+              <motion.span key={index} variants={letterVariant}>
+                {char}{' '}
+              </motion.span>
+            ))}
+        </motion.h2>
         <img className='hidden lg:inline-block absolute z-0 h-[80%] right-1 top-[15%]' src="/logo-symbol2.png" alt="" />
           <div className='grid md:grid-cols-2 gap-y-2 lg:grid-cols-4 py-8 gap-x-2 z-10 max-w-[85%] '>
           {cards.map((card, index) => (

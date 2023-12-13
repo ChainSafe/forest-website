@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'multi-gradient': "url('/gradient-bg.png')",
+        'patterned': "url('/bg-24.png')",
         'diamond-gradient': "url('/diamond-gradient.png')",
         'conic-gradient': 'bg-[linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(to bottom right, #68B566 0%, rgba(9, 11, 8, 0.80) 29%, rgba(32, 36, 32, 0.80) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #68B566 0%, rgba(9, 11, 8, 0.80) 29%, rgba(32, 36, 32, 0.80) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #68B566 0%, rgba(9, 11, 8, 0.80) 29%, rgba(32, 36, 32, 0.80) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #68B566 0%, rgba(9, 11, 8, 0.80) 29%, rgba(32, 36, 32, 0.80) 50%) top right / 50% 50% no-repeat]'
       },

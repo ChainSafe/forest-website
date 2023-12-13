@@ -5,18 +5,18 @@ import { IconArrowUpRight } from "@tabler/icons-react"
 
 const snapshotCards = [
   {
-    img: '',
+    img: '/snapshots/full.png',
     title: 'Full',
     desc: 'A full snapshot contains all block headers from genesis and the entirely inhabited chain state.',
    
   },
   {
-    img: '',
+    img: '/snapshots/lite.png',
     title: 'Lite',
     desc: 'A light snapshot contains all block headers from genesis and only the state tree for the latest N epochs.',
   },
   {
-    img: '',
+    img: '/snapshots/diff.png',
     title: 'Diff',
     desc: 'A diff snapshot contains only block headers and messages for the latest N epochs.',
   },
@@ -44,11 +44,10 @@ export default function SnapshotService() {
           No matter which Filecoin client software you operate, you can download the lightweight Forest chain state snapshots to bootstrap your node.
         </h2>
         {/* 3-column Overview */}
-        <div className='grid md:grid-cols-3 gap-y-2 py-4 gap-x-1 '>
+        <div className='grid md:grid-cols-3 gap-y-4 py-4 gap-x-1 '>
           {snapshotCards.map((card, index) => (
             <div key={index} className='transition-all py-8 flex flex-col justify-start' >
-            <div className='bg-neutral-950 h-[150px]'>
-              </div>
+            <img src={card.img} className='rounded-lg' alt=""/>
               <div className='px-1'>
                 <h3 className='mt-1 md:mt-3 text-brand-400 text-xl  font-semibold'>{card.title}</h3>
                 <h3 className='mt-1  text-neutral-400 text-lg leading-6 max-w-[90%]'>{card.desc}</h3>
@@ -60,7 +59,7 @@ export default function SnapshotService() {
          {/* Download Snapshots */}
           <div className="grid md:grid-cols-3 py-4">
             <div className='flex flex-col md:col-span-2'>
-              <h1 className='mt-7 text-green-500 text-2xl font-normal'>
+              <h1 className='mt-7 text-neutral-200 text-2xl font-normal'>
                 Download latest snapshots
               </h1>
               <h2 className='mt-3 md:max-w-[500px] text-neutral-400 text-lg leading-6 font-normal'>

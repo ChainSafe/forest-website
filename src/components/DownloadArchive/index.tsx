@@ -27,7 +27,7 @@ export default function DownloadArchive() {
   <div className="relative flex flex-col justify-center pt-8 pb-6 px-8">
     <div className="grid md:grid-cols-3 py-4">
         <div className='flex flex-col md:col-span-2'>
-        <h1 className='mt-7 text-green-500 text-2xl font-normal'>
+        <h1 className='mt-7 text-neutral-200 text-2xl font-normal'>
           Forest Archive
           </h1>
           <h2 className='mt-3 md:max-w-[500px] text-neutral-300 text-lg leading-6 font-normal'>

@@ -1,5 +1,26 @@
 import { Variants } from "framer-motion";
 
+
+export const sentenceVariant: Variants = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+export const letterVariant: Variants = {
+  hidden: { opacity: 0.2 },
+  visible: { opacity: 1 },
+};
+
+export const splitText = (sentence: string) => {
+  return sentence.split(' ');
+};
+
+
 export const fadeInVariant: Variants = {
   offscreen: {
     opacity: 0,
@@ -12,15 +33,6 @@ export const fadeInVariant: Variants = {
     },
   },
 };
-
-export const marqueeVariant: Variants = {
-  offscreen: {},
-  onscreen: {
-    // move xpos +1 each second? can you do interval stuff with framer? 
-    // loop it 
-    // on mouse enter, stop the movement.
-  },
-}
 
 export const stickyVariant: Variants = {
   offscreen: {

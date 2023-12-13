@@ -7,17 +7,17 @@ export default function Hero() {
   return (
     <div className="relative md:min-h-[80vh] h-full px-4 md:px-8">
       <div className="relative flex flex-col max-w-7xl py-24">
-        <img className='max-w-[60%] opacity-20' src="fullmark.png" alt="" />
+        <img className='max-w-[60%]' src="full-mark.png" alt="" />
         
-        <div className='mt-7 flex flex-col sm:flex-row justify-start items-start'>
-          <h1 className="md:max-w-[680px]  text-6xl text-neutral-300">
+        <div className='mt-10 flex flex-col sm:flex-row justify-start items-start'>
+          <h1 className="md:max-w-[680px]  text-6xl text-neutral-200">
             Premier Rust implementation for the Filecoin Protocol
           </h1>
           <h3 className='md:max-w-[380px] mt-3 text-3xl text-neutral-400 tracking-tight'>Run Forest to access Filecoin, the decentralized storage network.</h3>
         </div>
         <div className="py-4 flex items-center">
-          <Button className="mr-2" type="primary" href="#">Install</Button>
-          <Button type="secondary" href="#">Learn More</Button>
+          <a className="mr-2 transition-all rounded-full border-[1px] border-brand-400 text-brand-400 px-8 py-1 text-lg font-medium shadow-sm hover:brightness-[80%]"  href="#download">Install</a>
+          <a className='transition-all rounded-full border-[1px] border-gray-700 text-gray-300 px-8 py-1 text-lg font-medium shadow-sm hover:brightness-[80%]' href="#withforest">Learn More</a>
         </div>
       </div>
     </div>
