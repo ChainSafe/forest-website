@@ -20,6 +20,6 @@ jobs:
             with:
               apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
               accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-              projectName: lodestar-landing
-              directory: ./build
+              projectName: forest-website
+              directory: ./out
               gitHubToken: ${{ secrets.GITHUB_TOKEN }}
