@@ -25,11 +25,11 @@ const snapshotCards = [
 const downloadCards = [
   {
     title: 'Calibnet',
-    link: ''
+    link: 'https://forest.chainsafe.io/calibnet/snapshot-latest'
   },
   {
     title: 'Mainnet',
-    link: ''
+    link: 'https://forest.chainsafe.io/mainnet/snapshot-latest'
   },
 ]
 

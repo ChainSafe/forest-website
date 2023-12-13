@@ -35,33 +35,25 @@ export const metadata: Metadata = {
   icons: {
     icon: './favicon.ico',
   },
+  keywords: ['forest', 'filecoin', 'chainsafe', 'rust', 'ipfs', 'blockchain node', 'filecoin client', 'lotus'],
   twitter: {
     card: 'summary_large_image',
     title: 'Forest',
     description: 'The Filecoin Implementation in Rust',
-    // siteId: '1467726470533754880',
-    // creator: '@nextjs',
-    // creatorId: '1467726470533754880',
-    images: ['https://nextjs.org/og.png'],
+    images: ['https://imagedelivery.net/qdx9xDn6TxxInQGWsuRsVg/5c8f6e29-1c4e-43c6-f13b-eccd570fa700/public'],
   },
    openGraph: {
     title: 'Forest',
     description: 'The Filecoin Implementation in Rust',
     url: 'https://forest.chainsafe.io',
     siteName: 'Forest',
-    // images: [
-    //   {
-    //     url: 'https://nextjs.org/og.png',
-    //     width: 800,
-    //     height: 600,
-    //   },
-    //   {
-    //     url: 'https://nextjs.org/og-alt.png',
-    //     width: 1800,
-    //     height: 1600,
-    //     alt: 'My custom alt',
-    //   },
-    // ],
+    images: [
+      {
+        url: 'https://imagedelivery.net/qdx9xDn6TxxInQGWsuRsVg/5c8f6e29-1c4e-43c6-f13b-eccd570fa700/public',
+        width: 800,
+        height: 600,
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -87,9 +79,6 @@ export const metadata: Metadata = {
       'de-DE': '/de-DE',
     },
   },
-  // openGraph: {
-  //   images: '/og-image.png',
-  // },
 }
 
 export default function RootLayout({

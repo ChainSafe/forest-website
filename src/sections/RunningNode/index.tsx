@@ -7,14 +7,20 @@ const CalibnetProcessNoSSR = dynamic(
   () => import('@/components/CalibnetProcess'),
   { ssr: false }
 )
+const SyncStatusNoSSR = dynamic(
+  () => import('@/components/SyncStatusProcess'),
+  { ssr: false }
+)
 
 const processes = [
   {
+    comp: <CalibnetProcessNoSSR />,
     desc: 'Start the forest node. It will automatically connect to the bootstrap peers and start synchronizing the chain. If it is the first time starting the node, it will download the latest state snapshot',
-    calibnetCommand: 'forest',
-    mainnetCommand: 'forest --chain calibnet',
+    calibnetCommand: 'forest --chain calibnet',
+    mainnetCommand: 'forest',
   },
   {
+    comp: <SyncStatusNoSSR />,
     desc: 'In another shell, invoke commands on the running node using forest-cli, i.e., to check the synchronization status:',
     mainnetCommand: 'forest-cli sync status',
   },
@@ -30,8 +36,8 @@ export default function RunningNode() {
         </h2>
         <div className='grid lg:grid-cols-2 gap-y-2 py-4 gap-x-1 '>
           {processes.map((card, index) => (
-          <div key={index} className='transition-all py-8 flex flex-col justify-start' >
-            <CalibnetProcessNoSSR />
+            <div key={index} className='transition-all py-8 flex flex-col justify-start' >
+              {card.comp}
             <div className='px-2'>
               <h3 className='mt-1 md:mt-3 text-gray-300 text-xl leading-7 max-w-[80%]'>{card.desc}</h3>
               {card.calibnetCommand ? (<h3 className='mt-1 md:mt-3 text-xl leading-6 text-brand-400 font-mono max-w-[80%]'><span className="text-lg font-sans text-gray-300">On calibnet: </span> {card.calibnetCommand}</h3>) : ''}

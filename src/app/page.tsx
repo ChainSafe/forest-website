@@ -16,7 +16,7 @@ import WithForestYouCan2 from '@/sections/WithForestYouCan2'
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col bg-[#0f0f0f]">
       <Navbar />
       <Hero3 />
       <WithForestYouCan2 />
@@ -30,7 +30,7 @@ export default function Home() {
       <LearnMore />
       <Team />
       <Contributors />
-      <BetaSoftwareConsiderations />
+      {/* <BetaSoftwareConsiderations /> */}
       <Footer />
     </main>
   )
