@@ -138,7 +138,7 @@ export default function CalibnetProcess() {
       }
 
       // first, mock up a user typing out command
-      p5.background("#0f0f0f");
+      p5.background("#171717");
       drawCommand(p5);
 
       // next, print logs 2 seconds after command is typed

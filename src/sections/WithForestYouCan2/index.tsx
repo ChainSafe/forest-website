@@ -12,7 +12,7 @@ const properties = [
   },
   {
     icon: <IconArrowsRightLeft stroke={1.25} size={40} />,
-    desc: 'Gain access to Filecoin’s consensus data'
+    desc: 'Gain access to Filecoin chain data'
   },
   {
     icon: <IconNewSection stroke={1.25} size={40} />,
@@ -47,7 +47,7 @@ export default function WithForestYouCan2() {
             ))}
           </motion.div>
         <h2 className='md:mt-7 md:max-w-xl md:text-center text-neutral-300 text-2xl'>
-          All this for a fraction of the hardware requirements compared to a reference Filecoin node.
+          All this is available with minimal hardware.
         </h2>
         </div>
     </div>

@@ -10,13 +10,13 @@ export default function Hero3() {
         <img className='max-w-[60%]' src="full-mark.png" alt="" />
         <div className='mt-10 flex flex-col sm:flex-row justify-start items-start'>
           <h1 className="md:max-w-[700px]  text-6xl text-neutral-100">
-            Premier Rust implementation for the Filecoin Protocol
+            Rust implementation of the Filecoin Protocol
           </h1>
           <div className='flex flex-col'>
             <h3 className='md:max-w-[500px] mt-3 text-2xl text-neutral-400 '>Run Forest to access Filecoin, the decentralized storage network.</h3>
             <div className="py-4 flex items-center">
-              <Link smooth offset={40} className="btn-link border-brand-400 text-brand-400"  to="download">Install</Link>
-              <Link smooth offset={40}className='btn-link border-gray-700 text-neutral-200' to="withforest">Learn More</Link>
+              <Link smooth offset={40} className="btn-link border-brand-400 text-brand-400"  to="download">Download</Link>
+              <a href="https://share.hsforms.com/1DrMrWob7QM-C2RRL7HW0hQ4kcdm" target="_blank" rel="noopener noreferrer" className='btn-link border-gray-700 text-neutral-200' >Reach the Team</a>
             </div>
           </div>
         </div>

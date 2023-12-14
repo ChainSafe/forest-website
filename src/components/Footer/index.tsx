@@ -25,7 +25,7 @@ export const navigation = {
     },
   ],
   reach: [
-    { name: 'General', href: 'mailto:info@chainsafe.io' },
+    { name: 'General', href: 'https://share.hsforms.com/1DrMrWob7QM-C2RRL7HW0hQ4kcdm' },
     { name: 'Security', href: 'mailto:security@chainsafe.io' }],
   social: [
   
@@ -77,7 +77,7 @@ export const navigation = {
       name: 'Filecoin Slack',
       href: 'https://filecoinproject.slack.com/join/shared_invite/zt-1yxenlrc1-dwCCX7Mv3h9BHr~rQ6uUPw#/shared-invite/email',
       icon: (props: any) => (
-       <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-slack" width="38" height="38" viewBox="0 0 32 32" stroke-width="1.75" stroke="white" fill="none"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12v-6a2 2 0 0 1 4 0v6m0 -2a2 2 0 1 1 2 2h-6" /><path d="M12 12h6a2 2 0 0 1 0 4h-6m2 0a2 2 0 1 1 -2 2v-6" /><path d="M12 12v6a2 2 0 0 1 -4 0v-6m0 2a2 2 0 1 1 -2 -2h6" /><path d="M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6" /></svg>
+       <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-slack" width="38" height="38" viewBox="0 0 32 32" strokeWidth="1.75" stroke="white" fill="none"  strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12v-6a2 2 0 0 1 4 0v6m0 -2a2 2 0 1 1 2 2h-6" /><path d="M12 12h6a2 2 0 0 1 0 4h-6m2 0a2 2 0 1 1 -2 2v-6" /><path d="M12 12v6a2 2 0 0 1 -4 0v-6m0 2a2 2 0 1 1 -2 -2h6" /><path d="M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6" /></svg>
       ),
     },
   ],

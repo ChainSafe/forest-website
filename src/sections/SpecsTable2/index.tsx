@@ -45,7 +45,7 @@ export default function SpecsTable2() {
           {specs.map((nodeType, index) => (
             <li key={nodeType.name + index} className='flex flex-col xl:items-center'>
               <h3 className="text-xl text-neutral-100">{nodeType.name}</h3>
-              <div className='mt-3 grid grid-cols-2 gap-x-2 gap-y-2 xl:gap-x-1 xl:gap-y-1'>
+              <div className='mt-3 w-full grid grid-cols-1 gap-x-2 gap-y-2 xl:gap-x-1 xl:gap-y-1'>
                 <div className='stat-wrapper'>
                 <h3 className="stat-header">{nodeType.col.cpu}</h3>
                 <p className='stat-desc'>CPU</p>

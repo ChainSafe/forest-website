@@ -28,12 +28,12 @@ export default function SyncStatusProcess() {
       let isDelayCompleted = false; // 
 
       // vars related to printing output
-      let duration = 128116;
+      let duration = 20000;
       let displayLines:string[] = [];
       let currentLine = 0;
       let frameCounter = 0;
       let maxDisplayLines = 10;
-      let nextTime = 30;
+      let nextTime = 10;
       let currentTime = new Date("1970-01-01 " + terminalText[0].split(" ", 1)[0]).getTime();
 
       function drawCursor(p5: any) {
@@ -90,13 +90,6 @@ export default function SyncStatusProcess() {
           displayLines.push(terminalText[currentLine]);
         }
 
-        // If there is a next linen after this, parse time diff from the logs
-        if (currentLine < terminalText.length - 1) {
-          let logTime = new Date("1970-01-01 " + terminalText[currentLine + 1].split(" ", 1)[0]).getTime();
-          nextTime = (logTime - currentTime) / 30;
-          currentTime = logTime;
-        }
-
         // If displayLines exceed maxDisplayLines, remove the first line
         if (displayLines.length > maxDisplayLines) {
           displayLines.shift();
@@ -138,7 +131,7 @@ export default function SyncStatusProcess() {
       }
 
       // first, mock up a user typing out command
-      p5.background("#0f0f0f");
+      p5.background("#171717");
       drawCommand(p5);
 
       // next, print logs 2 seconds after command is typed

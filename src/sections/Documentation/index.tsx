@@ -5,17 +5,17 @@ import { IconArrowUpRight } from "@tabler/icons-react"
 
 const cards = [
   {
-    title: 'Github Pages',
+    title: 'Docs',
     desc: 'The end-user and developer documentation is available on GitHub pages.',
     link: 'https://chainsafe.github.io/forest/',
   },
   {
     title: 'Source Code',
-    desc: 'The source code is available under the conditions of the Apache 2.0 License on GitHub.',
+    desc: 'The source code is available under the Apache 2.0 License on GitHub.',
     link: 'https://github.com/ChainSafe/forest',
   },
   {
-    title: 'API Reference',
+    title: 'Rust Docs',
     desc: 'The full API documentation is available as a rust-doc book. ',
     link: 'https://chainsafe.github.io/forest/rustdoc/forest_filecoin/index.html',
   },
@@ -27,7 +27,7 @@ export default function Documentation() {
     <div className="relative h-full w-full  md:min-h-[50vh]" id="documentation">
       <div className="relative flex flex-col justify-center py-14 px-8">
         <h2 className='mt-7 text-white text-5xl font-normal'>
-          Documentation
+          Learn More
         </h2>
         <div className='grid md:grid-cols-2 gap-y-2 lg:grid-cols-3 py-8 gap-x-2 '>
           {cards.map((card, index) => (
