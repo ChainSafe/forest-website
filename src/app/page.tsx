@@ -7,7 +7,7 @@ import Binaries from '@/sections/Binaries'
 import Contributors from '@/sections/Contributors'
 import Documentation from '@/sections/Documentation'
 import Downloads from '@/sections/Downloads'
-import Hero3 from '@/sections/Hero3'
+import Hero from '@/sections/Hero'
 import LearnMore from '@/sections/LearnMore'
 import RunningNode from '@/sections/RunningNode'
 import SpecsTable2 from '@/sections/SpecsTable2'
@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main className="flex flex-col bg-[#0f0f0f]">
       <Navbar />
-      <Hero3 />
+      <Hero />
       <WithForestYouCan2 />
       <BetaTesters />
       <SpecsTable2 />
