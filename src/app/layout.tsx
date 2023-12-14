@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Forest',
     description: 'The Filecoin Implementation in Rust',
-    images: ['https://imagedelivery.net/qdx9xDn6TxxInQGWsuRsVg/5c8f6e29-1c4e-43c6-f13b-eccd570fa700/public'],
+    images: ['https://imagedelivery.net/qdx9xDn6TxxInQGWsuRsVg/7961f9e4-e7f3-41a2-6c41-fa97f0d5e300/public'],
   },
    openGraph: {
     title: 'Forest',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'Forest',
     images: [
       {
-        url: 'https://imagedelivery.net/qdx9xDn6TxxInQGWsuRsVg/5c8f6e29-1c4e-43c6-f13b-eccd570fa700/public',
+        url: 'https://imagedelivery.net/qdx9xDn6TxxInQGWsuRsVg/7961f9e4-e7f3-41a2-6c41-fa97f0d5e300/public',
         width: 800,
         height: 600,
       },
