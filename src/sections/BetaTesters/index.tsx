@@ -39,6 +39,7 @@ export default function BetaTesters() {
 
 
   const splitSentence = splitText(`Join our beta program to help make Forest the best it can be. Let us know how we can support your needs.`)
+  
   return (
     <div ref={ref} className="relative w-full md:min-h-[70vh]" id="beta-program">
       <div className="relative flex flex-col justify-center py-14 lg:pt-32 px-8">

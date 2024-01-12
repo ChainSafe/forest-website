@@ -35,16 +35,21 @@ export default function RunningNode() {
           Running a Node
         </h2>
         <div className='grid lg:grid-cols-2 gap-y-2 py-4 gap-x-1 '>
-          {processes.map((card, index) => (
-            <div key={index} className='transition-all py-8 flex flex-col justify-start' >
-              {card.comp}
+          <div className='transition-all py-8 flex flex-col justify-start' >
+             <CalibnetProcessNoSSR />
             <div className='px-2'>
-              <h3 className='mt-1 md:mt-3 text-gray-300 text-xl leading-7 max-w-[80%]'>{card.desc}</h3>
-              {card.calibnetCommand ? (<h3 className='mt-1 md:mt-3 text-xl leading-6 text-brand-400 font-mono max-w-[80%]'><span className="text-lg font-sans text-gray-300">On calibnet: </span> {card.calibnetCommand}</h3>) : ''}
-              <h3 className='mt-1 md:mt-1 text-brand-400 text-xl leading-6 font-mono max-w-[80%]'><span className="text-lg font-sans text-gray-300">On mainnet: </span> {card.mainnetCommand}</h3>
+              <h3 className='mt-1 md:mt-3 text-gray-300 text-xl leading-7 max-w-[80%]'>Start the forest node. It will automatically connect to the bootstrap peers and start synchronizing the chain. If it is the first time starting the node, it will download the latest state snapshot</h3>
+              <h3 className='mt-1 md:mt-3 text-xl leading-6 text-brand-400 font-mono max-w-[80%]'><span className="text-lg font-sans text-gray-300">On calibnet: </span> forest --chain calibnet</h3>
+              <h3 className='mt-1 md:mt-1 text-brand-400 text-xl leading-6 font-mono max-w-[80%]'><span className="text-lg font-sans text-gray-300">On mainnet: </span> forest</h3>
             </div>
           </div>
-        ))}
+          <div className='transition-all py-8 flex flex-col justify-start' >
+            <SyncStatusNoSSR />
+            <div className='px-2'>
+              <h3 className='mt-1 md:mt-3 text-gray-300 text-xl leading-7 max-w-[80%]'>In another shell, invoke commands on the running node using forest-cli, i.e., to check the synchronization status:</h3>
+              <h3 className='mt-1 md:mt-3 text-xl leading-6 text-brand-400 font-mono max-w-[80%]'><span className="text-lg font-sans text-gray-300">On calibnet and mainnet: </span> forest-cli sync status</h3>
+            </div>
+          </div>
         </div>
         </div>
     </div>
