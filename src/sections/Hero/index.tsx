@@ -16,7 +16,7 @@ export default function Hero() {
             <h3 className='md:max-w-[500px] mt-3 text-2xl text-neutral-400 '>Run Forest to access Filecoin, the decentralized storage network.</h3>
             <div className="py-4 flex flex-col  md:mt-0 md:flex-row items-center">
               <Link smooth offset={40} className="btn-link border-brand-400 text-brand-400"  to="download">Download</Link>
-              <a href="https://share.hsforms.com/1DrMrWob7QM-C2RRL7HW0hQ4kcdm" target="_blank" rel="noopener noreferrer" className='btn-link border-gray-700 text-neutral-200' >Reach the Team</a>
+              <a href="https://github.com/ChainSafe/forest/discussions" target="_blank" rel="noopener noreferrer" className='btn-link border-gray-700 text-neutral-200' >Reach the Team</a>
             </div>
           </div>
         </div>

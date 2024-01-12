@@ -25,7 +25,7 @@ export const navigation = {
     },
   ],
   reach: [
-    { name: 'General', href: 'https://share.hsforms.com/1DrMrWob7QM-C2RRL7HW0hQ4kcdm' },
+    { name: 'General', href: 'https://github.com/ChainSafe/forest/discussions' },
     { name: 'Security', href: 'mailto:security@chainsafe.io' }],
   social: [
   
