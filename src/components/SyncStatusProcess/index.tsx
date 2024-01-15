@@ -15,7 +15,7 @@ export default function SyncStatusProcess() {
 
     const sketch: Sketch = (p5) => {
       // vars related to typing the command:
-      let command = "forest --chain calibnet";
+      let command = "forest-cli sync status";
       let typedText = "";
       let cursorBlink = true;
       let cursorPosition = 0;
