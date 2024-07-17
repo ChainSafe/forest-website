@@ -4,19 +4,19 @@ import { IconArrowUpRight } from "@tabler/icons-react"
 
 const downloadLinks = [
   {
-    link: 'https://forest-archive.chainsafe.dev/list/calibnet/diff',
+    link: 'https://forest-internal.chainsafe.dev/list/calibnet/diff',
     title: 'Calibration Testnet Diff-Snapshots',
   },
   {
-    link: 'https://forest-archive.chainsafe.dev/list/calibnet/lite',
+    link: 'https://forest-internal.chainsafe.dev/list/calibnet/lite',
     title: 'Calibration Testnet Lite-Snapshots',
   },
   {
-    link: 'https://forest-archive.chainsafe.dev/list/mainnet/diff',
+    link: 'https://forest-internal.chainsafe.dev/list/mainnet/diff',
     title: 'Filecoin Mainnet Diff-Snapshots',
   },
   {
-    link: 'https://forest-archive.chainsafe.dev/list/mainnet/lite',
+    link: 'https://forest-internal.chainsafe.dev/list/mainnet/lite',
     title: 'Filecoin Mainnet Lite-Snapshots',
   },
 ]
