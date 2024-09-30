@@ -8,19 +8,19 @@ const cards = [
     title: 'Docker',
     img: '/docker.png',
     desc: 'Get the latest version of our Docker images',
-    link: 'https://chainsafe.github.io/forest/docker.html',
+    link: 'https://docs.forest.chainsafe.io/knowledge_base/docker_tips',
   },
   {
     title: 'Binaries',
     img: '/logo-symbol.png',
     desc: 'Download pre-compiled binaries from our GitHub releases page',
-    link: 'https://github.com/ChainSafe/forest/releases',
+    link: 'https://docs.forest.chainsafe.io/getting_started/install',
   },
   {
     title: 'Build from source',
     img: '/rust.png',
     desc: 'Build Forest from the latest source-code version',
-    link: 'https://chainsafe.github.io/forest/basic_usage.html',
+    link: 'https://docs.forest.chainsafe.io/getting_started/install',
   },
  
 ]

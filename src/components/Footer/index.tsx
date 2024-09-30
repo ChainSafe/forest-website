@@ -4,13 +4,13 @@ export const navigation = {
   product: [
     {
       name: 'User Guide',
-      href: 'https://chainsafe.github.io/forest/introduction.html',
+      href: 'https://docs.forest.chainsafe.io/',
     },
     {
       name: 'CLI Reference',
-      href: 'https://chainsafe.github.io/forest/rustdoc/forest_filecoin/index.html',
+      href: 'https://docs.forest.chainsafe.io/reference/cli',
     },
-    { name: 'Developer Documentation', href: 'https://chainsafe.github.io/forest/developer_documentation/introduction.html' },
+    { name: 'Developer Documentation', href: 'https://docs.rs/forest-filecoin' },
     {
       name: 'Github Repo',
       href: 'https://github.com/ChainSafe/forest',
