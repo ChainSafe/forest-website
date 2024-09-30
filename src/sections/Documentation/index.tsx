@@ -7,7 +7,7 @@ const cards = [
   {
     title: 'Docs',
     desc: 'The end-user and developer documentation is available on GitHub pages.',
-    link: 'https://chainsafe.github.io/forest/',
+    link: 'https://docs.forest.chainsafe.io/',
   },
   {
     title: 'Source Code',
@@ -17,7 +17,7 @@ const cards = [
   {
     title: 'Rust Docs',
     desc: 'The full API documentation is available as a rust-doc book. ',
-    link: 'https://chainsafe.github.io/forest/rustdoc/forest_filecoin/index.html',
+    link: 'https://docs.rs/forest-filecoin/',
   },
  
 ]

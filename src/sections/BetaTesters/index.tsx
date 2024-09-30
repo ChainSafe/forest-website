@@ -10,19 +10,19 @@ import { sentenceVariant, letterVariant, splitText } from "@/styles/animations";
 const cards = [
   {
     desc: 'Bootstrap your custom full node.',
-    link: 'https://chainsafe.github.io/forest/basic_usage.html',
+    link: 'https://docs.forest.chainsafe.io/getting_started/install',
   },
   {
     desc: 'Select Calibration testnet or Filecoin main network.',
-    link: 'https://chainsafe.github.io/forest/configuration.html',
+    link: 'https://docs.forest.chainsafe.io/getting_started/syncing',
   },
   {
     desc: 'Test our new HTTP-RPC interfaces.',
-    link: 'https://chainsafe.github.io/forest/developer_documentation/rpc_api_compatibility.html',
+    link: 'https://docs.forest.chainsafe.io/reference/json_rpc',
   },
   {
     desc: 'Import the Filecoin archive.',
-    link: 'https://chainsafe.github.io/forest/developer_documentation/filecoin_archive.html',
+    link: 'https://docs.forest.chainsafe.io/knowledge_base/snapshot_service',
   },
 ]
 
