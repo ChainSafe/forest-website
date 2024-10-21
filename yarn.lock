@@ -1950,10 +1950,10 @@ p5@1.7.0:
   resolved "https://registry.npmjs.org/p5/-/p5-1.7.0.tgz"
   integrity sha512-qrbT/44Dwm63ZtOKX/mp61pw+5yj6ijYLOmRv7p6zcfjbo83Vb0gVFEvW0kTLFu7hceWCig0HONo9F1bSlqbsQ==
 
-p5@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.npmjs.org/p5/-/p5-1.9.0.tgz"
-  integrity sha512-+5/hz0ZokCDf7BMMAeemE7FIo7gFZK7ImL62acHLXZwerGjqj+171bnaAWj4aCFCx6fwysAr2U7/AKuPyPhehA==
+p5@^1.11.0, p5@^1.9.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/p5/-/p5-1.11.0.tgz#4f2ed80d25c8a000f8411745c43255332038e3c3"
+  integrity sha512-UgjQK88M+QUjsGpZgS5ZoyY8AH6Ilmjil/oxWXA7hroe1yXBG+nYKae+fpn8gga71kKyZHumL234BNZekaqAHg==
 
 parent-module@^1.0.0:
   version "1.0.1"
