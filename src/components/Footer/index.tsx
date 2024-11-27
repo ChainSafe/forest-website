@@ -56,12 +56,12 @@ export const navigation = {
         </svg>
       ),
     },
-    
+
     {
       name: 'Filecoin Slack',
       href: 'https://filecoinproject.slack.com/join/shared_invite/zt-1yxenlrc1-dwCCX7Mv3h9BHr~rQ6uUPw#/shared-invite/email',
       icon: (props: any) => (
-       <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-slack" width="38" height="38" viewBox="0 0 32 32" strokeWidth="1.75" stroke="white" fill="none"  strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12v-6a2 2 0 0 1 4 0v6m0 -2a2 2 0 1 1 2 2h-6" /><path d="M12 12h6a2 2 0 0 1 0 4h-6m2 0a2 2 0 1 1 -2 2v-6" /><path d="M12 12v6a2 2 0 0 1 -4 0v-6m0 2a2 2 0 1 1 -2 -2h6" /><path d="M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-slack" width="38" height="38" viewBox="0 0 32 32" strokeWidth="1.75" stroke="white" fill="none" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 12v-6a2 2 0 0 1 4 0v6m0 -2a2 2 0 1 1 2 2h-6" /><path d="M12 12h6a2 2 0 0 1 0 4h-6m2 0a2 2 0 1 1 -2 2v-6" /><path d="M12 12v6a2 2 0 0 1 -4 0v-6m0 2a2 2 0 1 1 -2 -2h6" /><path d="M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6" /></svg>
       ),
     },
   ],
@@ -70,96 +70,98 @@ export const navigation = {
 export default function Footer() {
   return (
     <footer className='bg-neutral-900' aria-labelledby='footer-heading'>
-      <h2 id='footer-heading' className='sr-only'>
-        Footer
-      </h2>
-      <img src="/banner.png" alt="Forest patterned banner" />
-      <div className='mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32'>
-        <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
-          <div className='space-y-8'>
-            <img
-              className='w-[150px]'
-              src='/full-mark.png'
-              alt='Forest'
-            />
-            <p className='text-lg leading-6 text-neutral-400'>
-              The Filecoin implementation in Rust.
+      <div className="container mx-auto">
+        <h2 id='footer-heading' className='sr-only'>
+          Footer
+        </h2>
+        <img src="/banner.png" alt="Forest patterned banner" />
+        <div className='mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32'>
+          <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
+            <div className='space-y-8'>
+              <img
+                className='w-[150px]'
+                src='/full-mark.png'
+                alt='Forest'
+              />
+              <p className='text-lg leading-6 text-neutral-400'>
+                The Filecoin implementation in Rust.
+              </p>
+              <div className='flex space-x-6'>
+                {navigation.social.map((item) => (
+                  <Link
+                    target="_blank"
+                    key={item.name}
+                    href={item.href}
+                    className='hover:brightness-50'>
+                    <span className='sr-only'>{item.name}</span>
+                    <item.icon className='h-7 w-7' aria-hidden='true' />
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className='mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0'>
+              <div className='md:grid md:grid-cols-2 md:gap-8'>
+                <div>
+                  <h3 className='text-lg font-semibold leading-6 text-white'>
+                    Project
+                  </h3>
+                  <ul role='list' className='mt-6 space-y-4'>
+                    {navigation.product.map((item) => (
+                      <li key={item.name}>
+                        <Link
+                          target="_blank"
+                          href={item.href}
+                          className='text-lg leading-6 text-neutral-400 hover:text-brand-400'>
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className='mt-10 md:mt-0'>
+                  <h3 className='text-lg font-semibold leading-6 text-white'>
+                    Resources
+                  </h3>
+                  <ul role='list' className='mt-6 space-y-4'>
+                    {navigation.resources.map((item) => (
+                      <li key={item.name}>
+                        <Link
+                          target="_blank"
+                          href={item.href}
+                          className='text-lg leading-6 text-neutral-400 hover:text-brand-400'>
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className='md:grid md:grid-cols-2 md:gap-8'>
+                <div>
+                  <h3 className='text-lg font-semibold leading-6 text-white'>
+                    Reach us
+                  </h3>
+                  <ul role='list' className='mt-6 space-y-4'>
+                    {navigation.reach.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          className='text-lg leading-6 text-neutral-400 hover:text-brand-400'>
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='mt-16 border-t border-green-400/10 pt-8 sm:mt-20 lg:mt-24'>
+            <p className='text-sm leading-5 text-neutral-500'>
+              &copy; 2023 ChainSafe
             </p>
-            <div className='flex space-x-6'>
-              {navigation.social.map((item) => (
-                <Link
-                  target="_blank"
-                  key={item.name}
-                  href={item.href}
-                  className='hover:brightness-50'>
-                  <span className='sr-only'>{item.name}</span>
-                  <item.icon className='h-7 w-7' aria-hidden='true' />
-                </Link>
-              ))}
-            </div>
           </div>
-          <div className='mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0'>
-            <div className='md:grid md:grid-cols-2 md:gap-8'>
-              <div>
-                <h3 className='text-lg font-semibold leading-6 text-white'>
-                  Project
-                </h3>
-                <ul role='list' className='mt-6 space-y-4'>
-                  {navigation.product.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        target="_blank"
-                        href={item.href}
-                        className='text-lg leading-6 text-neutral-400 hover:text-brand-400'>
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className='mt-10 md:mt-0'>
-                <h3 className='text-lg font-semibold leading-6 text-white'>
-                  Resources
-                </h3>
-                <ul role='list' className='mt-6 space-y-4'>
-                  {navigation.resources.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        target="_blank"
-                        href={item.href}
-                        className='text-lg leading-6 text-neutral-400 hover:text-brand-400'>
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className='md:grid md:grid-cols-2 md:gap-8'>
-              <div>
-                <h3 className='text-lg font-semibold leading-6 text-white'>
-                  Reach us
-                </h3>
-                <ul role='list' className='mt-6 space-y-4'>
-                  {navigation.reach.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        target="_blank"
-                        className='text-lg leading-6 text-neutral-400 hover:text-brand-400'>
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='mt-16 border-t border-green-400/10 pt-8 sm:mt-20 lg:mt-24'>
-          <p className='text-sm leading-5 text-neutral-500'>
-            &copy; 2023 ChainSafe
-          </p>
         </div>
       </div>
     </footer>
