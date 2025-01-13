@@ -30,7 +30,7 @@ export const navigation = {
   social: [
     {
       name: 'Twitter',
-      href: 'https://twitter.com/ChainSafeth',
+      href: 'https://x.com/ChainSafeth',
       icon: (props: any) => (
         <svg
           role='img'
