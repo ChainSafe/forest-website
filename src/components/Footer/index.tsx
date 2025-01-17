@@ -29,7 +29,7 @@ export const navigation = {
     { name: 'Security', href: 'mailto:security@chainsafe.io' }],
   social: [
     {
-      name: 'Twitter',
+      name: 'X',
       href: 'https://x.com/ChainSafeth',
       icon: (props: any) => (
         <svg
