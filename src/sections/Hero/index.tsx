@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 export default function Hero() {
   return (
     <div className="relative h-screen w-full px-4 md:px-8 bg-no-repeat bg-cover bg-multi-gradient">
-      <div className="relative flex flex-col max-w-7xl mt-[40%] md:mt-0 md:py-48">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col max-w-7xl mt-[40%] md:mt-0 md:py-48">
         <img className='max-w-[60%]' src="full-mark.png" alt="" />
         <div className='mt-10 flex flex-col sm:flex-row justify-start items-start'>
           <h1 className="md:max-w-[700px]  text-6xl text-neutral-100">
