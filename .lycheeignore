@@ -1,1 +1,3 @@
 (https?:\/\/)?localhost:\d+
+https://www.youtube.com/embed/\$.*
+https://x.com/.*
