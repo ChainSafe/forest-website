@@ -24,7 +24,7 @@ export default function Contributors() {
               Join the team!
             </h3>
             <div className='flex gap-x-3 pt-3'>
-              <Button type='primary' href="http://chainsafe.io/careers">Open Positions</Button>
+              <Button type='primary' href="https://chainsafe.io/about-us#join-us">Open Positions</Button>
             </div>
           </div>
         </div>

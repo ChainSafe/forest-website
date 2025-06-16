@@ -18,7 +18,7 @@ export const navigation = {
   ],
   resources: [
     { name: 'About ChainSafe', href: 'https://chainsafe.io/' },
-    { name: 'Careers', href: 'https://chainsafe.io/careers' },
+    { name: 'Careers', href: 'https://chainsafe.io/about-us#join-us' },
     {
       name: 'Brand Assets',
       href: '/forest-logo-mini.zip',
