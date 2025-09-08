@@ -13,7 +13,7 @@
     "@tabler/icons-react": "^3.33.0",
     "classnames": "^2.3.2",
     "next": "15.5.2",
-    "p5": "^2.0.4",
+    "p5": "^2.0.5",
     "react": "^19",
     "react-dom": "^19",
     "react-p5": "^1.4.1",
