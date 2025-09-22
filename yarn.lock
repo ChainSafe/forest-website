@@ -2380,7 +2380,7 @@ __metadata:
     classnames: "npm:^2.3.2"
     eslint: "npm:^9"
     eslint-config-next: "npm:15.3.5"
-    framer-motion: "npm:^12.23.12"
+    framer-motion: "npm:^12.23.16"
     next: "npm:15.5.3"
     p5: "npm:^2.0.5"
     postcss: "npm:^8"
@@ -2414,9 +2414,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^12.23.12":
-  version: 12.23.12
-  resolution: "framer-motion@npm:12.23.12"
+"framer-motion@npm:^12.23.16":
+  version: 12.23.16
+  resolution: "framer-motion@npm:12.23.16"
   dependencies:
     motion-dom: "npm:^12.23.12"
     motion-utils: "npm:^12.23.6"
@@ -2432,7 +2432,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10c0/40dfb57bf714075c4f6dd0bbe5b84dd11310114474ebf603846ef9b888ed475fa653271c1fd98ec57a6a1d0b781cdf8b3ebcd5e2c6a3620e934b46304ae0fd39
+  checksum: 10c0/a154b614581f9e4d359a16cd590da7331e27857ac099c83908b5ec2b6bd7092d12192d989ecf17029355e64290d119e508342b5a6b0db69462df36727c674781
   languageName: node
   linkType: hard
 
