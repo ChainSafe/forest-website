@@ -23,7 +23,7 @@
     "@p5-wrapper/next": "^1.0.3",
     "@p5-wrapper/react": "^4.3.2",
     "@types/node": "^22",
-    "@types/p5": "^1.7.6",
+    "@types/p5": "^1.7.7",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.20",
