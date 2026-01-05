@@ -624,16 +624,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@p5-wrapper/react@npm:^4.3.2":
-  version: 4.4.2
-  resolution: "@p5-wrapper/react@npm:4.4.2"
+"@p5-wrapper/react@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "@p5-wrapper/react@npm:5.0.2"
   dependencies:
-    microdiff: "npm:^1.4.0"
-    p5: "npm:^1.9.4"
+    microdiff: "npm:^1.5.0"
+    react-error-boundary: "npm:^6.0.0"
   peerDependencies:
-    react: ">= 18.2.0"
-    react-dom: ">= 18.2.0"
-  checksum: 10c0/8965407525f6c148afb0b05085341cad25004dc0f074c1521218bd40975e4acf2de8b36f3513079d8999d7aa5069b0c0dfbddc03b6d3db6d0b77cd290768c5d3
+    p5: ">= 2.0.0"
+    react: ">= 19.0.0"
+    react-dom: ">= 19.0.0"
+  checksum: 10c0/aaefff471cee19cd46b52dee14ef635855eb9974d13764732b2d9d83660883cca5623738d8bf977c051da11a697617b9fb217104a328354d590e343caaba8e69
   languageName: node
   linkType: hard
 
@@ -2386,7 +2387,7 @@ __metadata:
   resolution: "forest-website@workspace:."
   dependencies:
     "@p5-wrapper/next": "npm:^1.0.3"
-    "@p5-wrapper/react": "npm:^4.3.2"
+    "@p5-wrapper/react": "npm:^5.0.2"
     "@tabler/icons-react": "npm:^3.33.0"
     "@types/node": "npm:^24"
     "@types/p5": "npm:^1.7.7"
@@ -3305,7 +3306,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"microdiff@npm:^1.4.0":
+"microdiff@npm:^1.5.0":
   version: 1.5.0
   resolution: "microdiff@npm:1.5.0"
   checksum: 10c0/5f55ca049451d63abf79fd1692808e1052180fbedfc91d9fcab9f02df0dd902aa6a4e30199fd345d1f91982842b12d85ffa86785e38d7dbfb6d59280074f9129
@@ -3771,13 +3772,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p5@npm:^1.9.4":
-  version: 1.11.3
-  resolution: "p5@npm:1.11.3"
-  checksum: 10c0/b37bc8107a347ac285dbc470e0feeea4db071e19ef879e1e382a2046d5335ee2e3694e60de665f32e715665c5bf76af1ea63542b5f0d916c4e4ec7fa374499f6
-  languageName: node
-  linkType: hard
-
 "p5@npm:^2.0.5":
   version: 2.0.5
   resolution: "p5@npm:2.0.5"
@@ -4076,6 +4070,16 @@ __metadata:
   peerDependencies:
     react: ^19.1.1
   checksum: 10c0/8c91198510521299c56e4e8d5e3a4508b2734fb5e52f29eeac33811de64e76fe586ad32c32182e2e84e070d98df67125da346c3360013357228172dbcd20bcdd
+  languageName: node
+  linkType: hard
+
+"react-error-boundary@npm:^6.0.0":
+  version: 6.0.1
+  resolution: "react-error-boundary@npm:6.0.1"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  checksum: 10c0/f557a924ab45169183cdb7b39b5d0d532cbada247991b9202c1e660c3777c18550fcf0388cbe253bd5d0b6d14628f94f3e24717ebc8c021a00662fe246d07479
   languageName: node
   linkType: hard
 
