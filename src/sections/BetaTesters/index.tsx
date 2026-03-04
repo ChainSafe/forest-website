@@ -18,7 +18,7 @@ const cards = [
   },
   {
     desc: 'Test our new HTTP-RPC interfaces.',
-    link: 'https://docs.forest.chainsafe.io/reference/json_rpc',
+    link: 'https://docs.forest.chainsafe.io/reference/json-rpc',
   },
   {
     desc: 'Import the Filecoin archive.',
