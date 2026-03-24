@@ -20,7 +20,7 @@
     "react-scroll": "^1.9.3"
   },
   "devDependencies": {
-    "@p5-wrapper/next": "^1.0.3",
+    "@p5-wrapper/next": "^3.0.1",
     "@p5-wrapper/react": "^5.0.2",
     "@types/node": "^25",
     "@types/p5": "^1.7.7",
