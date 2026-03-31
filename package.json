@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@p5-wrapper/next": "^3.0.1",
-    "@p5-wrapper/react": "^5.0.2",
+    "@p5-wrapper/react": "^5.0.3",
     "@types/node": "^25",
     "@types/p5": "^1.7.7",
     "@types/react": "^19",

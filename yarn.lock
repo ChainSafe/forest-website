@@ -643,17 +643,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@p5-wrapper/react@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "@p5-wrapper/react@npm:5.0.2"
+"@p5-wrapper/react@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "@p5-wrapper/react@npm:5.0.3"
   dependencies:
     microdiff: "npm:^1.5.0"
-    react-error-boundary: "npm:^6.0.0"
+    react-error-boundary: "npm:^6.1.1"
   peerDependencies:
     p5: ">= 2.0.0"
     react: ">= 19.0.0"
     react-dom: ">= 19.0.0"
-  checksum: 10c0/aaefff471cee19cd46b52dee14ef635855eb9974d13764732b2d9d83660883cca5623738d8bf977c051da11a697617b9fb217104a328354d590e343caaba8e69
+  checksum: 10c0/34de3062fe091b943e70eca2c754cf424b29e898ff3d918095f4b8be026a7b1f3718a9bd3b0b782e10cd4548a02ac2779c7ce5dff669fd45e0aa4c6546cb37b2
   languageName: node
   linkType: hard
 
@@ -2399,7 +2399,7 @@ __metadata:
   resolution: "forest-website@workspace:."
   dependencies:
     "@p5-wrapper/next": "npm:^3.0.1"
-    "@p5-wrapper/react": "npm:^5.0.2"
+    "@p5-wrapper/react": "npm:^5.0.3"
     "@tabler/icons-react": "npm:^3.36.1"
     "@types/node": "npm:^25"
     "@types/p5": "npm:^1.7.7"
@@ -4037,13 +4037,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-error-boundary@npm:^6.0.0":
-  version: 6.0.1
-  resolution: "react-error-boundary@npm:6.0.1"
+"react-error-boundary@npm:^6.1.1":
+  version: 6.1.1
+  resolution: "react-error-boundary@npm:6.1.1"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
-    react-dom: ^18.0.0 || ^19.0.0
-  checksum: 10c0/f557a924ab45169183cdb7b39b5d0d532cbada247991b9202c1e660c3777c18550fcf0388cbe253bd5d0b6d14628f94f3e24717ebc8c021a00662fe246d07479
+  checksum: 10c0/4c72112bd930629e73015515804f95e375f9d83bea07cbc0557eb44752c8e8fc57ce141126b8eed2d9301d3bd1e030ce1f59d0e71f70fc0d10a29b31ec2cf2c5
   languageName: node
   linkType: hard
 
