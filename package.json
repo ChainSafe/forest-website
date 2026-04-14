@@ -29,7 +29,7 @@
     "autoprefixer": "^10.4.27",
     "axios": "^1.15.0",
     "eslint": "^10",
-    "eslint-config-next": "16.2.2",
+    "eslint-config-next": "16.2.3",
     "framer-motion": "^12.23.26",
     "postcss": "^8",
     "react-intersection-observer": "^10.0.3",
