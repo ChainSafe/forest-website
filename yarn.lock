@@ -2788,7 +2788,6 @@ __metadata:
     framer-motion: "npm:^12.23.26"
     next: "npm:16.2.4"
     p5: "npm:^2.0.5"
-    postcss: "npm:^8"
     react: "npm:^19"
     react-dom: "npm:^19"
     react-intersection-observer: "npm:^10.0.3"
@@ -4421,7 +4420,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8, postcss@npm:^8.4.47":
+"postcss@npm:^8.4.47":
   version: 8.5.10
   resolution: "postcss@npm:8.5.10"
   dependencies:
