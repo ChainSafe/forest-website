@@ -30,7 +30,7 @@
     "axios": "^1.16.1",
     "eslint": "^10",
     "eslint-config-next": "16.2.9",
-    "framer-motion": "^12.23.26",
+    "framer-motion": "^12.41.0",
     "postcss": "^8",
     "react-intersection-observer": "^10.0.3",
     "tailwindcss": "^3.4.19",
