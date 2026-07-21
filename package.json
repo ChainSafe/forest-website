@@ -36,5 +36,8 @@
     "tailwindcss": "^3.4.19",
     "typescript": "^5"
   },
+  "resolutions": {
+    "postcss@npm:8.4.31": "^8.5.10"
+  },
   "packageManager": "yarn@4.7.0"
 }
