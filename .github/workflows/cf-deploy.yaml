@@ -1,5 +1,8 @@
 name: CloudFlare Deploy
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - 'gh-readonly-queue/**'
 
 jobs:
   deploy:
@@ -11,16 +14,43 @@ jobs:
           - uses: actions/checkout@v7
           - uses: actions/setup-node@v7
             with:
-              node-version: '20'
+              node-version: '22'
               package-manager-cache: false
           - run: corepack enable
           - run: yarn --immutable
           - run: yarn build
           - name: Publish to Cloudflare Pages
-            uses: cloudflare/pages-action@1
+            id: deploy
+            uses: cloudflare/wrangler-action@ebbaa1584979971c8614a24965b4405ff95890e0 # v4.0.0
             with:
               apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
               accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-              projectName: forest-website
-              directory: ./out
-              gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+              command: pages deploy ./out --project-name=forest-website --branch=${{ github.ref_name }}
+          - name: Record GitHub deployment
+            uses: actions/github-script@v9
+            env:
+              PAGES_ENVIRONMENT: ${{ steps.deploy.outputs.pages-environment }}
+              DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
+            with:
+              # Some vibe-coded workaround due to us sitting on direct upload which we can't migrate without creating a new project.
+              # To be done in the future. See <https://developers.cloudflare.com/pages/get-started/direct-upload/>
+              script: |
+                const production = process.env.PAGES_ENVIRONMENT
+                  ? process.env.PAGES_ENVIRONMENT === 'production'
+                  : context.ref === 'refs/heads/main'
+                const { data: deployment } = await github.rest.repos.createDeployment({
+                  ...context.repo,
+                  ref: context.sha,
+                  environment: production ? 'forest-website (Production)' : 'forest-website (Preview)',
+                  auto_merge: false,
+                  required_contexts: [],
+                  production_environment: production,
+                  transient_environment: !production,
+                })
+                await github.rest.repos.createDeploymentStatus({
+                  ...context.repo,
+                  deployment_id: deployment.id,
+                  state: 'success',
+                  environment_url: process.env.DEPLOYMENT_URL,
+                  log_url: `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+                })
