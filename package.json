@@ -12,7 +12,7 @@
   "dependencies": {
     "@tabler/icons-react": "^3.44.0",
     "classnames": "^2.3.2",
-    "next": "16.4.5",
+    "next": "16.4.6",
     "p5": "^2.0.5",
     "react": "^19",
     "react-dom": "^19",
@@ -20,8 +20,8 @@
     "react-scroll": "^1.9.3"
   },
   "devDependencies": {
-    "@p5-wrapper/next": "^3.0.1",
-    "@p5-wrapper/react": "^5.0.4",
+    "@p5-wrapper/next": "^3.0.2",
+    "@p5-wrapper/react": "^5.0.5",
     "@types/node": "^26",
     "@types/p5": "^1.7.7",
     "@types/react": "^19",
